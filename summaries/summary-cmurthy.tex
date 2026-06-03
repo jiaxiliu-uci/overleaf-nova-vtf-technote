@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{listings}
+
+\title{NOvA Production 6 Validation Task Force Contribution Summary}
+\author{Your Name Here}
+
+\begin{document}
+\maketitle
+
+\section{Task Description}
+When referring to specific studies / specific plots, please include the relevant docdb citation.
+Figure~\ref{fig:cmurthy-image-example} shows an example of how to include an image from the \texttt{images-cmurthy} directory.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{images-cmurthy/example-image.png}{%
+        \includegraphics[width=0.7\textwidth]{images-cmurthy/example-image.png}%
+    }{%
+        \fbox{\parbox[c][0.25\textheight][c]{0.7\textwidth}{\centering Example image placeholder from \texttt{images-cmurthy/example-image.png}}}%
+    }
+    \caption{Example figure showing how to include an image from the \texttt{images-cmurthy} directory.}
+    \label{fig:cmurthy-image-example}
+\end{figure}
+
+\section{A Complete List of Relevant Docdbs with Citations Including URL}
+For example, see Ref.~\cite{2021-06-29-retriggering-summary}.
+
+\bibliographystyle{unsrtnat}
+\bibliography{summary-cmurthy}
+
+\end{document}
